@@ -1,0 +1,384 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    /* Space to avoid header overlap (since navbar is fixed) */
+    margin-top: 80px;
+  }
+  
+  /* HEADER / NAVBAR (floating) */
+  .header {
+    position: fixed; /* makes the navbar float */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .header .logo a {
+    text-decoration: none;
+    color: #003A74; /* Darker blue */
+    font-size: 1.2rem;
+  }
+  .nav ul {
+    display: flex;
+    list-style: none;
+  }
+  .nav ul li {
+    margin-left: 2rem;
+  }
+  .nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .nav ul li a:hover {
+    color: #003A74;
+  }
+  
+  /* HERO SECTION */
+  /*
+    Replace the placeholder background with your own image, e.g.:
+    background: url('images/your-hero-image.jpg') no-repeat center center / cover;
+  */
+  .hero {
+    background: url('https://static.animecorner.me/2024/10/1728130790-ec720739d53e44869e5dd4252683781a-768x432.jpg') no-repeat center center/cover;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  .hero::after {
+    /* 30% transparent gray overlay */
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(128, 128, 128, 0.3);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1; /* ensures text is above overlay */
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  /* ABOUT SECTION */
+  .about-section {
+    padding: 3rem 2rem;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers image and text horizontally */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px;
+    align-self: center;
+  }
+  
+  /* E-COMMERCE SECTIONS */
+  .ecommerce-section {
+    padding: 2rem 2rem;
+  }
+  .ecommerce-red {
+    background-color: #CC0035; /* example red */
+    color: #fff;
+  }
+  .ecommerce-blue {
+    background-color: #354CA1; /* example blue */
+    color: #fff;
+  }
+  .ecommerce-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .ecommerce-image img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .ecommerce-text h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  .ecommerce-text p {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+  
+  /* TOPICS SECTION */
+  .topics-section {
+    padding: 3rem 2rem;
+    background-color: #f5f5f5;
+  }
+  .topics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .topic-box {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 300px;
+    text-align: center;
+    padding: 1rem;
+  }
+  .topic-box img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  .topic-box h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  .topic-box p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .explore-btn-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .explore-btn {
+    display: inline-block;
+    background-color: #003A74;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  .explore-btn:hover {
+    background-color: #002753;
+  }
+  
+  /* CTA SECTION */
+  /*
+    Replace the placeholder background with your own image, e.g.:
+    background: url('images/your-cta-image.jpg') no-repeat center center / cover;
+  */
+  .cta-section {
+    background: url('https://static.animecorner.me/2024/10/1728130790-ec720739d53e44869e5dd4252683781a-768x432.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+  }
+  .cta-section::after {
+    /* 30% transparent gray overlay */
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(128,128,128,0.3);
+  }
+  .cta-content {
+    position: relative;
+    z-index: 1;
+  }
+  .cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .cta-button {
+    background-color: #D7263D;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  .cta-button:hover {
+    background-color: #A51B2E;
+  }
+  
+  /* FOOTER */
+  .footer {
+    background-color: #003A74;
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 0.85rem; /* smaller font */
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Left text in the footer */
+  .footer-left {
+    flex: 1;
+    max-width: 400px;
+  }
+  .footer-left p {
+    line-height: 1.4;
+  }
+  
+  /* Right side links in the footer */
+  .footer-right {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .footer-links div h4 {
+    margin-bottom: 0.5rem;
+  }
+  .footer-links ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    body {
+      margin-top: 120px; /* Increase if navbar covers more vertical space */
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav ul {
+      margin-top: 0.5rem;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .ecommerce-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .topics-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .footer-right {
+      justify-content: flex-start;
+    }
+  }
+  
+
+
+
+
+  /* === team.html custom section styles === */
+
+/* Big title text alignment */
+.team-title-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: left; /* or center if you prefer */
+  }
+  .team-title-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .team-title-section p {
+    font-size: 1rem;
+    color: #666; /* subtle subheading color */
+  }
+  
+  /* The grid layout for the 6 pictures */
+  .team-grid-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .team-grid {
+    display: grid;        /* Or use flex if you prefer. */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+  .team-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  .team-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .team-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  .team-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0 1rem 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    /* Stack the columns into 1 or 2 across on smaller screens */
+    .team-grid {
+      grid-template-columns: 1fr; /* or repeat(2, 1fr); for 2 columns */
+      grid-gap: 1rem;
+    }
+  }
+  
