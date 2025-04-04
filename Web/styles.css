@@ -53,7 +53,7 @@
     background: url('images/your-hero-image.jpg') no-repeat center center / cover;
   */
   .hero {
-    background: url('https://static.animecorner.me/2024/10/1728130790-ec720739d53e44869e5dd4252683781a-768x432.jpg') no-repeat center center/cover;
+    background: url('https://github.com/Superuser-Henry/SMU-IEEE-Student-Chapter/blob/main/Pictures/SMUIEEE.JPG') no-repeat center center/cover;
     min-height: 400px;
     display: flex;
     align-items: center;
@@ -197,7 +197,7 @@
     background: url('images/your-cta-image.jpg') no-repeat center center / cover;
   */
   .cta-section {
-    background: url('https://static.animecorner.me/2024/10/1728130790-ec720739d53e44869e5dd4252683781a-768x432.jpg') no-repeat center center/cover;
+    background: url('https://github.com/Superuser-Henry/SMU-IEEE-Student-Chapter/blob/main/Pictures/SMUIEEE.JPG?raw=true') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 3rem 2rem;
